@@ -118,6 +118,9 @@ img{max-width:100%;}
   box-shadow:6px 6px 0 rgba(33,29,24,.16);transition:.18s;text-align:center;
 }
 .card:hover{transform:translate(-2px,-2px);box-shadow:9px 9px 0 rgba(33,29,24,.22);}
+.card--soon{border-style:dashed;box-shadow:none;background:transparent;}
+.card--soon:hover{transform:none;box-shadow:none;}
+.monogram--soon{background:transparent;color:var(--gold);box-shadow:inset 0 0 0 2px var(--gold);font-size:2.4rem;}
 .monogram{
   width:84px;height:84px;margin:0 auto 1rem;display:grid;place-items:center;
   font-family:var(--serif-display);font-size:2rem;color:var(--paper);background:var(--ink);
