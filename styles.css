@@ -1,0 +1,190 @@
+/* ============================================================
+   Fern St Records — vintage analog label site
+   ============================================================ */
+:root{
+  --paper:#f3e9d2;
+  --paper-2:#ece0c4;
+  --paper-3:#e6d8b8;
+  --ink:#211d18;
+  --ink-soft:#4a4035;
+  --gold:#a9762a;
+  --gold-2:#c9a24a;
+  --rust:#9b3b2e;
+  --line:#c2b189;
+  --serif-display:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --cond:"Oswald",Arial,sans-serif;
+  --serif-body:"EB Garamond",Georgia,serif;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif-body);
+  font-size:19px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+/* paper grain overlay */
+body::before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+a{color:inherit;}
+img{max-width:100%;}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(243,233,210,.94);
+  border-bottom:2px solid var(--ink);
+  backdrop-filter:saturate(120%) blur(2px);
+}
+.header-inner{
+  max-width:1080px;margin:0 auto;padding:.7rem 1.4rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.brand{
+  font-family:var(--serif-display);font-size:1.35rem;text-decoration:none;letter-spacing:.01em;
+}
+.nav{display:flex;gap:1.6rem;}
+.nav a{
+  font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;
+  text-decoration:none;color:var(--ink-soft);padding-bottom:2px;border-bottom:1px solid transparent;
+}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--gold);}
+.nav-toggle{display:none;background:none;border:0;font-size:1.5rem;color:var(--ink);cursor:pointer;}
+
+/* ---------- hero ---------- */
+.hero{
+  text-align:center;padding:3.2rem 1.4rem 4rem;
+  background:
+    radial-gradient(circle at 50% 18%,var(--paper-2),transparent 60%),
+    var(--paper);
+  border-bottom:2px solid var(--ink);
+}
+.hero-rule,.footer-rule{
+  font-family:var(--cond);text-transform:uppercase;letter-spacing:.32em;font-size:.72rem;
+  color:var(--rust);margin-bottom:2rem;
+}
+.seal{width:200px;height:200px;display:block;margin:0 auto 1.4rem;animation:spin 60s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+@media(prefers-reduced-motion:reduce){.seal{animation:none;}}
+.seal-ring{fill:none;stroke:var(--ink);stroke-width:1.5;}
+.seal-ring--thick{stroke-width:3;}
+.seal-ring--hair{stroke:var(--gold);stroke-width:1;}
+.seal-arc{font-family:var(--cond);font-size:12px;letter-spacing:3px;fill:var(--ink);font-weight:500;}
+.seal-mono{font-family:var(--serif-display);font-size:38px;fill:var(--ink);text-anchor:middle;}
+.seal-sub{font-family:var(--cond);font-size:9px;letter-spacing:3px;fill:var(--ink-soft);text-anchor:middle;}
+.seal-rpm{font-family:var(--cond);font-size:8px;letter-spacing:2px;fill:var(--gold);text-anchor:middle;}
+.wordmark{
+  font-family:var(--serif-display);font-weight:400;line-height:.92;
+  font-size:clamp(3.2rem,11vw,6.4rem);margin:.4rem 0 .2rem;letter-spacing:.005em;
+}
+.tagline{
+  font-style:italic;font-size:1.3rem;color:var(--ink-soft);margin:.2rem 0 1.8rem;
+}
+.btn{
+  display:inline-block;font-family:var(--cond);text-transform:uppercase;letter-spacing:.18em;
+  font-size:.82rem;text-decoration:none;color:var(--paper);background:var(--ink);
+  padding:.8rem 1.8rem;border:2px solid var(--ink);transition:.2s;
+}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+
+/* ---------- sections ---------- */
+.section{max-width:1080px;margin:0 auto;padding:4.5rem 1.4rem;}
+.section--alt{background:var(--paper-2);max-width:none;border-block:2px solid var(--ink);}
+.section--alt > *{max-width:1080px;margin-inline:auto;}
+.section-title{
+  text-align:center;font-family:var(--serif-display);font-weight:400;
+  font-size:clamp(2rem,5vw,2.9rem);margin:0 0 .4rem;
+  display:flex;align-items:center;gap:1.2rem;justify-content:center;
+}
+.section-title span{position:relative;padding:0 .2rem;}
+.section-title::before,.section-title::after{
+  content:"";height:2px;background:var(--ink);flex:1;max-width:120px;opacity:.5;
+}
+.section-lede{text-align:center;color:var(--ink-soft);font-style:italic;margin:0 0 2.6rem;}
+
+/* ---------- roster ---------- */
+.roster-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;margin-top:2.4rem;
+}
+.card{
+  background:var(--paper);border:2px solid var(--ink);padding:1.6rem 1.5rem;
+  box-shadow:6px 6px 0 rgba(33,29,24,.16);transition:.18s;text-align:center;
+}
+.card:hover{transform:translate(-2px,-2px);box-shadow:9px 9px 0 rgba(33,29,24,.22);}
+.monogram{
+  width:84px;height:84px;margin:0 auto 1rem;display:grid;place-items:center;
+  font-family:var(--serif-display);font-size:2rem;color:var(--paper);background:var(--ink);
+  border-radius:50%;border:2px solid var(--ink);box-shadow:inset 0 0 0 3px var(--paper),inset 0 0 0 5px var(--ink);
+}
+.card h3{font-family:var(--serif-display);font-weight:400;font-size:1.6rem;margin:.2rem 0 .4rem;}
+.genre{font-family:var(--cond);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--gold);margin:0 0 .8rem;}
+.blurb{font-size:1rem;color:var(--ink-soft);margin:0 0 1rem;}
+.cat{font-family:var(--cond);letter-spacing:.1em;font-size:.7rem;color:var(--ink);text-transform:uppercase;border-top:1px solid var(--line);padding-top:.7rem;margin:0;}
+
+/* ---------- releases ---------- */
+.press-list{list-style:none;margin:0 auto;padding:0;max-width:840px;}
+.press-item{
+  display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;
+  padding:1.1rem .4rem;border-bottom:1px solid var(--line);
+}
+.press-item:first-child{border-top:1px solid var(--line);}
+.press-meta{display:flex;align-items:baseline;gap:1rem;min-width:240px;flex:1;}
+.cat-no{font-family:var(--cond);letter-spacing:.1em;font-size:.74rem;color:var(--rust);white-space:nowrap;}
+.track{font-size:1.05rem;}
+.track b{font-weight:400;font-family:var(--serif-display);}
+.press-actions{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;}
+.preview{height:34px;width:230px;max-width:54vw;}
+.chip{
+  font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;
+  padding:.4rem .8rem;border:1.5px solid var(--ink);text-decoration:none;white-space:nowrap;
+}
+.chip--soon{color:var(--ink-soft);border-style:dashed;opacity:.7;cursor:not-allowed;}
+.chip--soon:hover{background:none;}
+.press-note{text-align:center;color:var(--ink-soft);font-size:.85rem;font-style:italic;margin-top:1.8rem;}
+.press-note code{font-family:var(--cond);font-style:normal;background:var(--paper-3);padding:.05em .4em;}
+
+/* ---------- liner / about ---------- */
+.liner{
+  max-width:680px;margin:2rem auto 0;background:var(--paper);border:2px solid var(--ink);
+  padding:2rem 2.2rem;box-shadow:6px 6px 0 rgba(33,29,24,.16);
+}
+.liner p{margin:0 0 1rem;}
+.liner-sign{font-style:italic;text-align:right;color:var(--gold);margin-bottom:0;}
+
+/* ---------- contact ---------- */
+.contact-email{text-align:center;font-family:var(--serif-display);font-size:clamp(1.5rem,5vw,2.3rem);margin:.4rem 0;}
+.contact-email a{text-decoration:none;border-bottom:2px solid var(--gold);}
+.contact-email a:hover{color:var(--gold);}
+.socials{text-align:center;font-family:var(--cond);text-transform:uppercase;letter-spacing:.16em;font-size:.84rem;color:var(--ink-soft);display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.2rem;}
+.contact-soon{text-align:center;font-style:italic;color:var(--ink-soft);font-size:.85rem;margin-top:.6rem;}
+
+/* ---------- footer ---------- */
+.site-footer{text-align:center;border-top:2px solid var(--ink);padding:2.6rem 1.4rem;background:var(--paper);}
+.site-footer p{margin:.3rem 0;font-size:.9rem;color:var(--ink-soft);}
+.footer-rule{margin-bottom:1rem;}
+.footer-fine{font-family:var(--cond);text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;}
+
+/* ---------- reveal ---------- */
+.section,.hero{opacity:1;}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+/* ---------- mobile ---------- */
+@media(max-width:720px){
+  .nav{
+    position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);
+    flex-direction:column;gap:0;padding:.4rem 0;display:none;
+  }
+  .nav.open{display:flex;}
+  .nav a{padding:.8rem 1.4rem;border-bottom:1px solid var(--line);}
+  .nav-toggle{display:block;}
+  .press-item{flex-direction:column;align-items:flex-start;}
+  .preview{width:100%;max-width:100%;}
+}
