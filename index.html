@@ -18,8 +18,9 @@
   <div class="header-inner">
     <a href="#top" class="brand">Fern St Records</a>
     <nav class="nav" id="nav">
-      <a href="#roster">Roster</a>
-      <a href="#releases">Chart</a>
+      <a href="#j-bryant">J. Bryant</a>
+      <a href="#ezra-wren">Ezra Wren</a>
+      <a href="#georgia-lane">Georgia Lane</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
   </div>
@@ -35,131 +36,98 @@
     </defs>
     <circle cx="110" cy="110" r="101" class="seal-ring seal-ring--thick" />
     <circle cx="110" cy="110" r="84" class="seal-ring" />
-    <circle cx="110" cy="110" r="58" class="seal-ring seal-ring--hair" />
     <text class="seal-arc"><textPath href="#sealArc" startOffset="0">FERN ST RECORDS ★ INDEPENDENT ★ FERN ST RECORDS ★ INDEPENDENT ★ </textPath></text>
     <text x="110" y="103" class="seal-mono">FSR</text>
     <text x="110" y="126" class="seal-sub">EST. MMXXVI</text>
-    <text x="110" y="146" class="seal-rpm">— 33⅓ RPM —</text>
   </svg>
 
   <h1 class="wordmark">Fern St<br />Records</h1>
   <p class="tagline">Stories worth singing.</p>
-  <a href="#roster" class="btn">Meet the roster</a>
+  <a href="#j-bryant" class="btn">Meet the artists</a>
 </section>
 
-<!-- ░░ Roster ░░ -->
-<section class="section" id="roster">
-  <h2 class="section-title"><span>The Roster</span></h2>
-  <div class="roster-grid">
-
-    <article class="card">
-      <div class="monogram">GL</div>
-      <h3>Georgia Lane</h3>
-      <p class="location">Asheville, NC</p>
-      <p class="genre">Country</p>
-      <p class="blurb">Small-town North Carolina heart, big-city pulse — sharp-witted, sharp-elbowed, and unapologetically Southern.</p>
-    </article>
-
-    <article class="card">
-      <div class="monogram">JB</div>
-      <h3>J. Bryant</h3>
+<!-- ░░ J. Bryant ░░ -->
+<section class="artist" id="j-bryant">
+  <div class="artist-head">
+    <div class="monogram">JB</div>
+    <div class="artist-info">
+      <h2>J. Bryant</h2>
       <p class="location">Washington, DC</p>
       <p class="genre">R&amp;B</p>
       <p class="blurb">Church roots, club instincts. Romantic enough for ballads, confident enough for the rooftop — church chords under club lights.</p>
-    </article>
+    </div>
+  </div>
+  <ol class="songs">
+    <li class="song">
+      <div class="song-title"><b>WHERE GOOD GIRLS DON'T GO</b></div>
+      <audio controls preload="none" src="assets/songs/where-good-girls-dont-go.mp3"></audio>
+    </li>
+    <li class="song">
+      <div class="song-title"><b>DON'T LET ME SING.</b></div>
+      <audio controls preload="none" src="assets/songs/dont-let-me-sing.mp3"></audio>
+    </li>
+    <li class="song">
+      <div class="song-title"><b>BAD HABITS</b></div>
+      <audio controls preload="none" src="assets/songs/bad-habits.mp3"></audio>
+    </li>
+  </ol>
+</section>
 
-    <article class="card">
-      <div class="monogram">EW</div>
-      <h3>Ezra Wren</h3>
+<!-- ░░ Ezra Wren ░░ -->
+<section class="artist artist--alt" id="ezra-wren">
+  <div class="artist-head">
+    <div class="monogram">EW</div>
+    <div class="artist-info">
+      <h2>Ezra Wren</h2>
       <p class="location">San Francisco, CA</p>
       <p class="genre">Folk</p>
       <p class="blurb">The label's quiet witness — plainspoken protest folk and tender, adult love songs, sung close-mic'd after everyone's gone home.</p>
-    </article>
-
+    </div>
   </div>
-  <p class="roster-soon">More artists coming soon.</p>
-</section>
-
-<!-- ░░ Releases ░░ -->
-<section class="section section--alt" id="releases">
-  <h2 class="section-title"><span>The Fern St Chart</span></h2>
-  <p class="section-lede">This week at Fern St · 30-second previews</p>
-  <ol class="chart">
-
-    <li class="chart-row">
-      <div class="rank"><span class="rank-no">1</span><span class="move">▲</span></div>
-      <div class="chart-main"><span class="track"><b>Lo siento, no comprende</b> — Buck Wilder</span></div>
-      <div class="press-actions">
-        <audio class="preview" controls preload="none" src="assets/previews/lo-siento-no-comprende.mp3"></audio>
-        <a class="chip chip--soon" aria-disabled="true" data-spotify="" title="Spotify link coming soon">Spotify · soon</a>
-      </div>
+  <ol class="songs">
+    <li class="song">
+      <div class="song-title"><b>The Kitchen Piano</b></div>
+      <audio controls preload="none" src="assets/songs/the-kitchen-piano.mp3"></audio>
     </li>
-
-    <li class="chart-row">
-      <div class="rank"><span class="rank-no">2</span><span class="move">▲</span></div>
-      <div class="chart-main"><span class="track"><b>WHERE GOOD GIRLS DON'T GO</b> — J. Bryant</span></div>
-      <div class="press-actions">
-        <audio class="preview" controls preload="none" src="assets/previews/where-good-girls-dont-go.mp3"></audio>
-        <a class="chip chip--soon" aria-disabled="true" data-spotify="" title="Spotify link coming soon">Spotify · soon</a>
-      </div>
+    <li class="song">
+      <div class="song-title"><b>Angels in the Wires</b></div>
+      <audio controls preload="none" src="assets/songs/angels-in-the-wires.mp3"></audio>
     </li>
-
-    <li class="chart-row">
-      <div class="rank"><span class="rank-no">3</span><span class="move">NEW</span></div>
-      <div class="chart-main"><span class="track"><b>Mama Didn't Warn Me</b> — Georgia Lane</span></div>
-      <div class="press-actions">
-        <audio class="preview" controls preload="none" src="assets/previews/mama-didnt-warn-me.mp3"></audio>
-        <a class="chip chip--soon" aria-disabled="true" data-spotify="" title="Spotify link coming soon">Spotify · soon</a>
-      </div>
+    <li class="song">
+      <div class="song-title"><b>In a Blackout in the Valley</b></div>
+      <audio controls preload="none" src="assets/songs/in-a-blackout-in-the-valley.mp3"></audio>
     </li>
-
-    <li class="chart-row">
-      <div class="rank"><span class="rank-no">4</span><span class="move">▲</span></div>
-      <div class="chart-main"><span class="track"><b>BAD HABITS</b> — J. Bryant</span></div>
-      <div class="press-actions">
-        <audio class="preview" controls preload="none" src="assets/previews/bad-habits.mp3"></audio>
-        <a class="chip chip--soon" aria-disabled="true" data-spotify="" title="Spotify link coming soon">Spotify · soon</a>
-      </div>
-    </li>
-
-    <li class="chart-row">
-      <div class="rank"><span class="rank-no">5</span><span class="move">NEW</span></div>
-      <div class="chart-main"><span class="track"><b>EBITDaddy</b> — Footsie</span></div>
-      <div class="press-actions">
-        <audio class="preview" controls preload="none" src="assets/previews/ebitdaddy.mp3"></audio>
-        <a class="chip chip--soon" aria-disabled="true" data-spotify="" title="Spotify link coming soon">Spotify · soon</a>
-      </div>
-    </li>
-
-    <li class="chart-row">
-      <div class="rank"><span class="rank-no">6</span><span class="move">▼</span></div>
-      <div class="chart-main"><span class="track"><b>City Boys Don't Know How to Break a Heart</b> — Georgia Lane</span></div>
-      <div class="press-actions">
-        <audio class="preview" controls preload="none" src="assets/previews/city-boys-dont-know-how-to-break-a-heart.mp3"></audio>
-        <a class="chip chip--soon" aria-disabled="true" data-spotify="" title="Spotify link coming soon">Spotify · soon</a>
-      </div>
-    </li>
-
-    <li class="chart-row">
-      <div class="rank"><span class="rank-no">7</span><span class="move">NEW</span></div>
-      <div class="chart-main"><span class="track"><b>DON'T LET ME SING.</b> — J. Bryant</span></div>
-      <div class="press-actions">
-        <audio class="preview" controls preload="none" src="assets/previews/dont-let-me-sing.mp3"></audio>
-        <a class="chip chip--soon" aria-disabled="true" data-spotify="" title="Spotify link coming soon">Spotify · soon</a>
-      </div>
-    </li>
-
-    <li class="chart-row">
-      <div class="rank"><span class="rank-no">8</span><span class="move">▼</span></div>
-      <div class="chart-main"><span class="track"><b>All Hat, No Horse</b> — Georgia Lane</span></div>
-      <div class="press-actions">
-        <audio class="preview" controls preload="none" src="assets/previews/all-hat-no-horse.mp3"></audio>
-        <a class="chip chip--soon" aria-disabled="true" data-spotify="" title="Spotify link coming soon">Spotify · soon</a>
-      </div>
-    </li>
-
   </ol>
 </section>
+
+<!-- ░░ Georgia Lane ░░ -->
+<section class="artist" id="georgia-lane">
+  <div class="artist-head">
+    <div class="monogram">GL</div>
+    <div class="artist-info">
+      <h2>Georgia Lane</h2>
+      <p class="location">Asheville, NC</p>
+      <p class="genre">Country</p>
+      <p class="blurb">Small-town North Carolina heart, big-city pulse — sharp-witted, sharp-elbowed, and unapologetically Southern.</p>
+    </div>
+  </div>
+  <ol class="songs">
+    <li class="song">
+      <div class="song-title"><b>All Hat, No Horse</b></div>
+      <audio controls preload="none" src="assets/songs/all-hat-no-horse.mp3"></audio>
+    </li>
+    <li class="song">
+      <div class="song-title"><b>Mama Didn't Warn Me</b></div>
+      <audio controls preload="none" src="assets/songs/mama-didnt-warn-me.mp3"></audio>
+    </li>
+    <li class="song">
+      <div class="song-title"><b>City Boys Don't Know How to Break a Heart</b></div>
+      <audio controls preload="none" src="assets/songs/city-boys-dont-know-how-to-break-a-heart.mp3"></audio>
+    </li>
+  </ol>
+</section>
+
+<p class="roster-soon">More artists coming soon.</p>
 
 <!-- ░░ Footer ░░ -->
 <footer class="site-footer">

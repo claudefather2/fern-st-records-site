@@ -92,7 +92,26 @@ img{max-width:100%;}
 .section-title span{display:inline-block;border-bottom:3px solid var(--accent);padding-bottom:.35rem;}
 .section-lede{text-align:center;color:var(--ink-soft);font-style:italic;margin:.8rem 0 2.4rem;}
 
-/* ---------- roster ---------- */
+/* ---------- artist sections ---------- */
+.artist{max-width:880px;margin:0 auto;padding:3.4rem 1.4rem;}
+.artist--alt{background:var(--paper-2);max-width:none;border-block:3px solid var(--ink);}
+.artist--alt > *{max-width:880px;margin-inline:auto;}
+.artist-head{display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.8rem;}
+.artist-head .monogram{flex:0 0 auto;margin:0;width:78px;height:78px;font-size:1.6rem;}
+.artist-info{flex:1;min-width:0;}
+.artist-info h2{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,4.5vw,2.6rem);margin:0 0 .3rem;line-height:1;}
+.artist-info .location{margin:0 0 .3rem;}
+.artist-info .genre{margin:0 0 .7rem;}
+.artist-info .blurb{margin:0;max-width:52ch;}
+
+.songs{list-style:none;margin:0;padding:0;}
+.song{padding:.85rem 0;border-bottom:1px solid var(--line);}
+.song:first-child{border-top:1px solid var(--line);}
+.song-title{font-size:1.05rem;margin-bottom:.5rem;}
+.song-title b{font-weight:400;font-family:var(--display);font-size:.95em;}
+.song audio{width:100%;max-width:540px;height:38px;display:block;}
+
+/* ---------- roster (legacy/unused) ---------- */
 .roster-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;margin-top:2rem;
   border:3px solid var(--ink);
@@ -113,7 +132,7 @@ img{max-width:100%;}
 .card--soon{background:var(--paper);}
 .card--soon .blurb{color:var(--ink-soft);}
 .monogram--soon{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 2px var(--accent);}
-.roster-soon{text-align:center;font-family:var(--cond);text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;color:var(--ink-soft);margin:1.8rem 0 0;}
+.roster-soon{text-align:center;font-family:var(--cond);text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;color:var(--ink-soft);margin:0;padding:3rem 1.4rem;border-top:3px solid var(--ink);}
 
 /* ---------- chart (Billboard-style, compact table) ---------- */
 .chart{list-style:none;margin:0 auto;padding:0;max-width:760px;}

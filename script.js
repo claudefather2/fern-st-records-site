@@ -13,8 +13,8 @@
     });
   }
 
-  // Only one preview plays at a time
-  var players = document.querySelectorAll('audio.preview');
+  // Only one track plays at a time
+  var players = document.querySelectorAll('audio');
   players.forEach(function (a) {
     a.addEventListener('play', function () {
       players.forEach(function (other) { if (other !== a) other.pause(); });
@@ -38,5 +38,5 @@
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
   }, { threshold: 0.12 });
-  document.querySelectorAll('.section').forEach(function (s) { s.classList.add('reveal'); io.observe(s); });
+  document.querySelectorAll('.artist').forEach(function (s) { s.classList.add('reveal'); io.observe(s); });
 })();
