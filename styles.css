@@ -114,22 +114,24 @@ img{max-width:100%;}
 .monogram--soon{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 2px var(--accent);}
 .roster-soon{text-align:center;font-family:var(--cond);text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;color:var(--ink-soft);margin:1.8rem 0 0;}
 
-/* ---------- chart (Billboard-style) ---------- */
-.chart{list-style:none;margin:0 auto;padding:0;max-width:780px;}
+/* ---------- chart (Billboard-style, compact table) ---------- */
+.chart{list-style:none;margin:0 auto;padding:0;max-width:760px;}
 .chart-row{
-  display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;
-  padding:.85rem .2rem;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:2.4rem 1fr auto;align-items:center;column-gap:1rem;
+  padding:.3rem .2rem;border-bottom:1px solid var(--line);
 }
 .chart-row:first-child{border-top:1px solid var(--line);}
-.rank{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:2.6ch;line-height:.9;}
-.rank-no{font-family:var(--display);font-size:2.1rem;color:var(--ink);}
+.rank{display:flex;align-items:baseline;gap:.22rem;line-height:1;}
+.rank-no{font-family:var(--display);font-size:1.4rem;color:var(--ink);}
 .chart-row:nth-child(1) .rank-no,
 .chart-row:nth-child(2) .rank-no,
 .chart-row:nth-child(3) .rank-no{color:var(--accent);}
-.move{font-family:var(--cond);font-size:.58rem;letter-spacing:.06em;color:var(--ink-soft);margin-top:.25rem;}
-.chart-main{flex:1;min-width:180px;}
-.chart-main .track{font-size:1.02rem;}
+.move{font-family:var(--cond);font-size:.5rem;letter-spacing:.04em;color:var(--ink-soft);}
+.chart-main{min-width:0;}
+.chart-main .track{font-size:.96rem;}
 .chart-main .track b{font-family:var(--display);font-weight:400;font-size:.9em;}
+.chart .preview{height:30px;width:172px;max-width:40vw;}
+.chart .press-actions{gap:.6rem;}
 
 /* ---------- releases ---------- */
 .press-list{list-style:none;margin:0 auto;padding:0;max-width:760px;}
@@ -184,7 +186,8 @@ img{max-width:100%;}
   .nav a{padding:.8rem 1.4rem;border-bottom:1px solid var(--line);}
   .nav-toggle{display:block;}
   .press-item{flex-direction:column;align-items:flex-start;}
-  .chart-main{flex-basis:calc(100% - 4rem);}
-  .chart-row .press-actions{margin-left:auto;}
+  .chart-row{grid-template-columns:2.2rem 1fr;row-gap:.4rem;}
+  .chart-row .press-actions{grid-column:1 / -1;}
+  .chart .preview{width:100%;max-width:100%;}
   .preview{width:100%;max-width:100%;}
 }
