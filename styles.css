@@ -92,24 +92,27 @@ img{max-width:100%;}
 .section-title span{display:inline-block;border-bottom:3px solid var(--accent);padding-bottom:.35rem;}
 .section-lede{text-align:center;color:var(--ink-soft);font-style:italic;margin:.8rem 0 2.4rem;}
 
-/* ---------- artist sections ---------- */
-.artist{max-width:880px;margin:0 auto;padding:3.4rem 1.4rem;}
-.artist--alt{background:var(--paper-2);max-width:none;border-block:3px solid var(--ink);}
-.artist--alt > *{max-width:880px;margin-inline:auto;}
-.artist-head{display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.8rem;}
-.artist-head .monogram{flex:0 0 auto;margin:0;width:78px;height:78px;font-size:1.6rem;}
-.artist-info{flex:1;min-width:0;}
-.artist-info h2{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,4.5vw,2.6rem);margin:0 0 .3rem;line-height:1;}
-.artist-info .location{margin:0 0 .3rem;}
-.artist-info .genre{margin:0 0 .7rem;}
-.artist-info .blurb{margin:0;max-width:52ch;}
+/* ---------- artists: three panes ---------- */
+.artists{
+  max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-block:3px solid var(--ink);
+}
+.artist{padding:2.8rem 1.6rem;border-right:1px solid var(--line);text-align:center;}
+.artist:last-child{border-right:none;}
+.artist-head{margin-bottom:1.6rem;}
+.artist-head .monogram{margin:0 auto 1rem;width:76px;height:76px;font-size:1.55rem;}
+.artist-head h2{font-family:var(--display);font-weight:400;font-size:1.7rem;margin:0 0 .3rem;line-height:1;}
+.artist-head .location{margin:0 0 .3rem;}
+.artist-head .genre{margin:0 0 .7rem;}
+.artist-head .blurb{margin:0 auto;max-width:34ch;font-size:.95rem;}
 
-.songs{list-style:none;margin:0;padding:0;}
+.songs{list-style:none;margin:1.4rem 0 0;padding:0;}
 .song{padding:.85rem 0;border-bottom:1px solid var(--line);}
 .song:first-child{border-top:1px solid var(--line);}
-.song-title{font-size:1.05rem;margin-bottom:.5rem;}
-.song-title b{font-weight:400;font-family:var(--display);font-size:.95em;}
-.song audio{width:100%;max-width:540px;height:38px;display:block;}
+.song-title{font-size:1rem;margin-bottom:.5rem;}
+.song-title b{font-weight:400;font-family:var(--display);font-size:.92em;}
+.song audio{width:100%;height:36px;display:block;}
 
 /* ---------- roster (legacy/unused) ---------- */
 .roster-grid{
@@ -205,9 +208,7 @@ img{max-width:100%;}
   .nav.open{display:flex;}
   .nav a{padding:.8rem 1.4rem;border-bottom:1px solid var(--line);}
   .nav-toggle{display:block;}
-  .press-item{flex-direction:column;align-items:flex-start;}
-  .chart-row{grid-template-columns:2.2rem 1fr;row-gap:.4rem;}
-  .chart-row .press-actions{grid-column:1 / -1;}
-  .chart .preview{width:100%;max-width:100%;}
-  .preview{width:100%;max-width:100%;}
+  .artists{grid-template-columns:1fr;}
+  .artist{border-right:none;border-bottom:1px solid var(--line);}
+  .artist:last-child{border-bottom:none;}
 }
