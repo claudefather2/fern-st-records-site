@@ -105,7 +105,8 @@ img{max-width:100%;}
   width:72px;height:72px;margin:0 auto 1rem;display:grid;place-items:center;border-radius:50%;
   font-family:var(--display);font-size:1.5rem;color:var(--paper);background:var(--ink);
 }
-.card h3{font-family:var(--display);font-weight:400;font-size:1.35rem;margin:.2rem 0 .5rem;}
+.card h3{font-family:var(--display);font-weight:400;font-size:1.35rem;margin:.2rem 0 .3rem;}
+.location{font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--ink-soft);margin:0 0 .35rem;}
 .genre{font-family:var(--cond);text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:var(--accent);margin:0 0 .8rem;}
 .blurb{font-size:1rem;color:var(--ink-soft);margin:0 0 1rem;}
 .cat{font-family:var(--cond);letter-spacing:.1em;font-size:.68rem;color:var(--ink);text-transform:uppercase;margin:0;}
