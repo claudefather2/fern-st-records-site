@@ -7,8 +7,8 @@ aesthetic) hosted on GitHub Pages. The private catalog/business repo lives separ
 ## Files
 - `index.html` — the single-page site (hero, roster, releases, about, contact)
 - `styles.css` — vintage/analog styling
-- `script.js` — mobile nav, single-preview playback, scroll reveal, Spotify-link activation
-- `assets/previews/*.mp3` — 30-second song previews (promo excerpts only; not full tracks)
+- `script.js` — mobile nav, single-track playback (only one plays at a time), scroll reveal, Spotify-link activation
+- `assets/songs/*.mp3` — full song audio, one file per track (basename = song slug)
 
 ## Run locally
 Just open `index.html` in a browser, or serve it:
@@ -16,17 +16,22 @@ Just open `index.html` in a browser, or serve it:
 python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
+## Adding / updating a song
+Drop the full MP3 into `assets/songs/<song-slug>.mp3` (slug must match the catalog repo), then add
+or update its `<audio>` element in `index.html`:
+```html
+<audio controls preload="none" src="assets/songs/<song-slug>.mp3"></audio>
+```
+`script.js` automatically wires every `<audio>` so only one track plays at a time.
+
 ## Adding a Spotify link (once released)
-Each track has a "Spotify · soon" chip in `index.html`. Set its `data-spotify` attribute to the
-track's Spotify URL and it auto-activates into a live button on load:
+`script.js` activates any `a.chip[data-spotify]` element: set the `data-spotify` attribute to the
+track's Spotify URL and on load it becomes a live "Spotify" button. To use it, add a chip beside a
+track in `index.html`:
 ```html
 <a class="chip chip--soon" data-spotify="https://open.spotify.com/track/XXXX">Spotify · soon</a>
 ```
-
-## Regenerating previews
-Previews are 30s excerpts cut from the masters in the private `fern-st-records` repo (offset ~⅓
-into each track, with fades). Re-run the generation step when tracks change. **Only 30-second
-excerpts are published here — never the full unreleased masters.**
+(No tracks are released yet, so there are currently no Spotify chips in the page.)
 
 ## Deploy
 Hosted via **GitHub Pages** from `main` (root). Pushing to `main` updates the live site.
